@@ -1,0 +1,2500 @@
+{
+  "best_model_name": "Lasso Regression",
+  "num_cols": [
+    "PropertyID",
+    "PropertyClass",
+    "PropertyFrontage",
+    "PropertySize",
+    "OverallQual",
+    "OverallCond",
+    "YearBuilt",
+    "YearRemodAdd",
+    "ExteriorCladdingArea",
+    "ExterQual",
+    "ExterCond",
+    "BsmntFinSty1",
+    "BsmtFinSF2",
+    "BsmtUnfSF",
+    "BsmntSqFtage",
+    "1stFlrSF",
+    "2ndFlrSF",
+    "LowQualFinSF",
+    "GrLivArea",
+    "BsmtFullBath",
+    "BsmtHalfBath",
+    "Bath1",
+    "Bath2",
+    "BedroomUpLev",
+    "KitchenUpLev",
+    "KitchenQual",
+    "CntRmsUpLev",
+    "CntFireplaces",
+    "BasementYrBlt",
+    "BasementCars",
+    "BasementSqFootage",
+    "WoodDeckSF",
+    "OpenPorchSF",
+    "EnclosedPorch",
+    "3SsnPorch",
+    "ScreenPorch",
+    "PoolArea",
+    "AddVal",
+    "SaleMon",
+    "SaleYr",
+    "PropertyAge"
+  ],
+  "cat_cols": [
+    "PropertyZone",
+    "Street",
+    "Alley",
+    "PropertyShape",
+    "Elevation",
+    "Amenities",
+    "Orientation",
+    "Grade",
+    "Neighborhood",
+    "Condition1",
+    "Condition2",
+    "BldgType",
+    "PropertyStyle",
+    "RoofStyle",
+    "RoofMatl",
+    "Roof1Material",
+    "Roof2Material",
+    "ExteriorCladdingType",
+    "PropertyFooting",
+    "BsmntFinish",
+    "BsmntMaintenance",
+    "BsmntVisibility",
+    "BsmntFinRat1",
+    "BsmntFinQual1",
+    "Heating",
+    "HeatingEfficiency",
+    "CentralAir",
+    "Electrical",
+    "Functional",
+    "QualFireplace",
+    "BasementType",
+    "BasementFinish",
+    "BasementQual",
+    "BasementCond",
+    "PavedDrive",
+    "PoolQC",
+    "BoundaryFeatures",
+    "AddFeatures",
+    "SaleType",
+    "SaleCondn"
+  ],
+  "qual_cols": [
+    "ExterQual",
+    "ExterCond",
+    "BsmtQual",
+    "BsmtCond",
+    "HeatingQC",
+    "KitchenQual",
+    "FireplaceQu",
+    "GarageQual",
+    "GarageCond"
+  ],
+  "cat_options": {
+    "PropertyZone": [
+      "C (all)",
+      "FV",
+      "RH",
+      "RL",
+      "RM"
+    ],
+    "Street": [
+      "Grvl",
+      "Pave"
+    ],
+    "Alley": [
+      "Grvl",
+      "Pave"
+    ],
+    "PropertyShape": [
+      "IR1",
+      "IR2",
+      "IR3",
+      "Reg"
+    ],
+    "Elevation": [
+      "Bnk",
+      "HLS",
+      "Low",
+      "Lvl"
+    ],
+    "Amenities": [
+      "AllPub",
+      "NoSeWa"
+    ],
+    "Orientation": [
+      "Corner",
+      "CulDSac",
+      "FR2",
+      "FR3",
+      "Inside"
+    ],
+    "Grade": [
+      "Gtl",
+      "Mod",
+      "Sev"
+    ],
+    "Neighborhood": [
+      "Blmngtn",
+      "Blueste",
+      "BrDale",
+      "BrkSide",
+      "ClearCr",
+      "CollgCr",
+      "Crawfor",
+      "Edwards",
+      "Gilbert",
+      "IDOTRR",
+      "MeadowV",
+      "Mitchel",
+      "NAmes",
+      "NPkVill",
+      "NWAmes",
+      "NoRidge",
+      "NridgHt",
+      "OldTown",
+      "SWISU",
+      "Sawyer",
+      "SawyerW",
+      "Somerst",
+      "StoneBr",
+      "Timber",
+      "Veenker"
+    ],
+    "Condition1": [
+      "Artery",
+      "Feedr",
+      "Norm",
+      "PosA",
+      "PosN",
+      "RRAe",
+      "RRAn",
+      "RRNe",
+      "RRNn"
+    ],
+    "Condition2": [
+      "Artery",
+      "Feedr",
+      "Norm",
+      "PosA",
+      "PosN",
+      "RRAe",
+      "RRAn",
+      "RRNn"
+    ],
+    "BldgType": [
+      "1Fam",
+      "2fmCon",
+      "Duplex",
+      "Twnhs",
+      "TwnhsE"
+    ],
+    "PropertyStyle": [
+      "1.5Fin",
+      "1.5Unf",
+      "1Story",
+      "2.5Fin",
+      "2.5Unf",
+      "2Story",
+      "SFoyer",
+      "SLvl"
+    ],
+    "RoofStyle": [
+      "Flat",
+      "Gable",
+      "Gambrel",
+      "Hip",
+      "Mansard",
+      "Shed"
+    ],
+    "RoofMatl": [
+      "CompShg",
+      "Membran",
+      "Metal",
+      "Roll",
+      "Tar&Grv",
+      "WdShake",
+      "WdShngl"
+    ],
+    "Roof1Material": [
+      "AsbShng",
+      "AsphShn",
+      "BrkComm",
+      "BrkFace",
+      "CBlock",
+      "CemntBd",
+      "HdBoard",
+      "ImStucc",
+      "MetalSd",
+      "Plywood",
+      "Stone",
+      "Stucco",
+      "VinylSd",
+      "Wd Sdng",
+      "WdShing"
+    ],
+    "Roof2Material": [
+      "AsbShng",
+      "AsphShn",
+      "Brk Cmn",
+      "BrkFace",
+      "CBlock",
+      "CmentBd",
+      "HdBoard",
+      "ImStucc",
+      "MetalSd",
+      "Other",
+      "Plywood",
+      "Stone",
+      "Stucco",
+      "VinylSd",
+      "Wd Sdng",
+      "Wd Shng"
+    ],
+    "ExteriorCladdingType": [
+      "BrkCmn",
+      "BrkFace",
+      "Stone"
+    ],
+    "PropertyFooting": [
+      "BrkTil",
+      "CBlock",
+      "PConc",
+      "Slab",
+      "Stone",
+      "Wood"
+    ],
+    "BsmntFinish": [
+      "Ex",
+      "Fa",
+      "Gd",
+      "TA"
+    ],
+    "BsmntMaintenance": [
+      "Fa",
+      "Gd",
+      "Po",
+      "TA"
+    ],
+    "BsmntVisibility": [
+      "Av",
+      "Gd",
+      "Mn",
+      "No"
+    ],
+    "BsmntFinRat1": [
+      "ALQ",
+      "BLQ",
+      "GLQ",
+      "LwQ",
+      "Rec",
+      "Unf"
+    ],
+    "BsmntFinQual1": [
+      "ALQ",
+      "BLQ",
+      "GLQ",
+      "LwQ",
+      "Rec",
+      "Unf"
+    ],
+    "Heating": [
+      "Floor",
+      "GasA",
+      "GasW",
+      "Grav",
+      "OthW",
+      "Wall"
+    ],
+    "HeatingEfficiency": [
+      "Ex",
+      "Fa",
+      "Gd",
+      "Po",
+      "TA"
+    ],
+    "CentralAir": [
+      "N",
+      "Y"
+    ],
+    "Electrical": [
+      "FuseA",
+      "FuseF",
+      "FuseP",
+      "Mix",
+      "SBrkr"
+    ],
+    "Functional": [
+      "Maj1",
+      "Maj2",
+      "Min1",
+      "Min2",
+      "Mod",
+      "Sev",
+      "Typ"
+    ],
+    "QualFireplace": [
+      "Ex",
+      "Fa",
+      "Gd",
+      "Po",
+      "TA"
+    ],
+    "BasementType": [
+      "2Types",
+      "Attchd",
+      "Basment",
+      "BuiltIn",
+      "CarPort",
+      "Detchd"
+    ],
+    "BasementFinish": [
+      "Fin",
+      "RFn",
+      "Unf"
+    ],
+    "BasementQual": [
+      "Ex",
+      "Fa",
+      "Gd",
+      "Po",
+      "TA"
+    ],
+    "BasementCond": [
+      "Ex",
+      "Fa",
+      "Gd",
+      "Po",
+      "TA"
+    ],
+    "PavedDrive": [
+      "N",
+      "P",
+      "Y"
+    ],
+    "PoolQC": [
+      "Ex",
+      "Fa",
+      "Gd"
+    ],
+    "BoundaryFeatures": [
+      "GdPrv",
+      "GdWo",
+      "MnPrv",
+      "MnWw"
+    ],
+    "AddFeatures": [
+      "Gar2",
+      "Othr",
+      "Shed",
+      "TenC"
+    ],
+    "SaleType": [
+      "COD",
+      "CWD",
+      "Con",
+      "ConLD",
+      "ConLI",
+      "ConLw",
+      "New",
+      "Oth",
+      "WD"
+    ],
+    "SaleCondn": [
+      "Abnorml",
+      "AdjLand",
+      "Alloca",
+      "Family",
+      "Normal",
+      "Partial"
+    ]
+  },
+  "num_stats": {
+    "PropertyID": {
+      "min": 1.0,
+      "max": 1460.0,
+      "median": 730.5,
+      "default": 730.5
+    },
+    "PropertyClass": {
+      "min": 20.0,
+      "max": 190.0,
+      "median": 50.0,
+      "default": 50.0
+    },
+    "PropertyFrontage": {
+      "min": 21.0,
+      "max": 313.0,
+      "median": 69.0,
+      "default": 69.0
+    },
+    "PropertySize": {
+      "min": 1300.0,
+      "max": 215245.0,
+      "median": 9475.0,
+      "default": 9475.0
+    },
+    "OverallQual": {
+      "min": 1.0,
+      "max": 10.0,
+      "median": 6.0,
+      "default": 6.0
+    },
+    "OverallCond": {
+      "min": 1.0,
+      "max": 9.0,
+      "median": 5.0,
+      "default": 5.0
+    },
+    "YearBuilt": {
+      "min": 1872.0,
+      "max": 2010.0,
+      "median": 1972.5,
+      "default": 1972.5
+    },
+    "YearRemodAdd": {
+      "min": 1950.0,
+      "max": 2010.0,
+      "median": 1994.0,
+      "default": 1994.0
+    },
+    "ExteriorCladdingArea": {
+      "min": 0.0,
+      "max": 1600.0,
+      "median": 0.0,
+      "default": 0.0
+    },
+    "ExterQual": {
+      "min": 2.0,
+      "max": 5.0,
+      "median": 3.0,
+      "default": 3.0
+    },
+    "ExterCond": {
+      "min": 1.0,
+      "max": 5.0,
+      "median": 3.0,
+      "default": 3.0
+    },
+    "BsmntFinSty1": {
+      "min": 0.0,
+      "max": 2188.0,
+      "median": 382.0,
+      "default": 382.0
+    },
+    "BsmtFinSF2": {
+      "min": 0.0,
+      "max": 1474.0,
+      "median": 0.0,
+      "default": 0.0
+    },
+    "BsmtUnfSF": {
+      "min": 0.0,
+      "max": 2336.0,
+      "median": 477.5,
+      "default": 477.5
+    },
+    "BsmntSqFtage": {
+      "min": 0.0,
+      "max": 3206.0,
+      "median": 991.0,
+      "default": 991.0
+    },
+    "1stFlrSF": {
+      "min": 334.0,
+      "max": 3228.0,
+      "median": 1086.0,
+      "default": 1086.0
+    },
+    "2ndFlrSF": {
+      "min": 0.0,
+      "max": 2065.0,
+      "median": 0.0,
+      "default": 0.0
+    },
+    "LowQualFinSF": {
+      "min": 0.0,
+      "max": 572.0,
+      "median": 0.0,
+      "default": 0.0
+    },
+    "GrLivArea": {
+      "min": 334.0,
+      "max": 4476.0,
+      "median": 1461.5,
+      "default": 1461.5
+    },
+    "BsmtFullBath": {
+      "min": 0.0,
+      "max": 3.0,
+      "median": 0.0,
+      "default": 0.0
+    },
+    "BsmtHalfBath": {
+      "min": 0.0,
+      "max": 2.0,
+      "median": 0.0,
+      "default": 0.0
+    },
+    "Bath1": {
+      "min": 0.0,
+      "max": 3.0,
+      "median": 2.0,
+      "default": 2.0
+    },
+    "Bath2": {
+      "min": 0.0,
+      "max": 2.0,
+      "median": 0.0,
+      "default": 0.0
+    },
+    "BedroomUpLev": {
+      "min": 0.0,
+      "max": 8.0,
+      "median": 3.0,
+      "default": 3.0
+    },
+    "KitchenUpLev": {
+      "min": 0.0,
+      "max": 3.0,
+      "median": 1.0,
+      "default": 1.0
+    },
+    "KitchenQual": {
+      "min": 2.0,
+      "max": 5.0,
+      "median": 3.0,
+      "default": 3.0
+    },
+    "CntRmsUpLev": {
+      "min": 2.0,
+      "max": 14.0,
+      "median": 6.0,
+      "default": 6.0
+    },
+    "CntFireplaces": {
+      "min": 0.0,
+      "max": 3.0,
+      "median": 1.0,
+      "default": 1.0
+    },
+    "BasementYrBlt": {
+      "min": 1900.0,
+      "max": 2010.0,
+      "median": 1980.0,
+      "default": 1980.0
+    },
+    "BasementCars": {
+      "min": 0.0,
+      "max": 4.0,
+      "median": 2.0,
+      "default": 2.0
+    },
+    "BasementSqFootage": {
+      "min": 0.0,
+      "max": 1390.0,
+      "median": 479.5,
+      "default": 479.5
+    },
+    "WoodDeckSF": {
+      "min": 0.0,
+      "max": 857.0,
+      "median": 0.0,
+      "default": 0.0
+    },
+    "OpenPorchSF": {
+      "min": 0.0,
+      "max": 547.0,
+      "median": 24.5,
+      "default": 24.5
+    },
+    "EnclosedPorch": {
+      "min": 0.0,
+      "max": 552.0,
+      "median": 0.0,
+      "default": 0.0
+    },
+    "3SsnPorch": {
+      "min": 0.0,
+      "max": 508.0,
+      "median": 0.0,
+      "default": 0.0
+    },
+    "ScreenPorch": {
+      "min": 0.0,
+      "max": 480.0,
+      "median": 0.0,
+      "default": 0.0
+    },
+    "PoolArea": {
+      "min": 0.0,
+      "max": 738.0,
+      "median": 0.0,
+      "default": 0.0
+    },
+    "AddVal": {
+      "min": 0.0,
+      "max": 15500.0,
+      "median": 0.0,
+      "default": 0.0
+    },
+    "SaleMon": {
+      "min": 1.0,
+      "max": 12.0,
+      "median": 6.0,
+      "default": 6.0
+    },
+    "SaleYr": {
+      "min": 2006.0,
+      "max": 2010.0,
+      "median": 2008.0,
+      "default": 2008.0
+    },
+    "PropertyAge": {
+      "min": 16.0,
+      "max": 154.0,
+      "median": 53.5,
+      "default": 53.5
+    }
+  },
+  "benchmarks": [
+    {
+      "Model Algorithm": "Lasso Regression",
+      "5-Fold CV R2": 0.9025,
+      "Test R2 Score": 0.9318205820630052,
+      "MAE ($)": 14258.873197351291,
+      "MAPE (%)": 8.802886662430545,
+      "Median AE ($)": 10532.046651482495,
+      "RMSE ($)": 19406.30093910712
+    },
+    {
+      "Model Algorithm": "Ridge Regression",
+      "5-Fold CV R2": 0.9018,
+      "Test R2 Score": 0.9242056440817402,
+      "MAE ($)": 14804.1323738533,
+      "MAPE (%)": 9.088409986452467,
+      "Median AE ($)": 10346.862999236095,
+      "RMSE ($)": 20461.362549911348
+    },
+    {
+      "Model Algorithm": "Gradient Boosting",
+      "5-Fold CV R2": 0.8712,
+      "Test R2 Score": 0.9228683442883785,
+      "MAE ($)": 14969.114077625698,
+      "MAPE (%)": 9.01272277022052,
+      "Median AE ($)": 10839.47363919235,
+      "RMSE ($)": 20641.081290811908
+    },
+    {
+      "Model Algorithm": "Linear Regression",
+      "5-Fold CV R2": 0.9012,
+      "Test R2 Score": 0.9073659572974944,
+      "MAE ($)": 15883.243290472949,
+      "MAPE (%)": 9.705403070152741,
+      "Median AE ($)": 10801.70815981178,
+      "RMSE ($)": 22620.459676941668
+    },
+    {
+      "Model Algorithm": "Random Forest",
+      "5-Fold CV R2": 0.8654,
+      "Test R2 Score": 0.8931785562138129,
+      "MAE ($)": 16623.118769918226,
+      "MAPE (%)": 10.286405115079765,
+      "Median AE ($)": 10624.160102744558,
+      "RMSE ($)": 24290.99692286918
+    },
+    {
+      "Model Algorithm": "Decision Tree",
+      "5-Fold CV R2": 0.7645,
+      "Test R2 Score": 0.757582722950977,
+      "MAE ($)": 25721.323526285767,
+      "MAPE (%)": 15.599011166059276,
+      "Median AE ($)": 17219.703623653506,
+      "RMSE ($)": 36592.99038596669
+    }
+  ],
+  "top_positive_drivers": {
+    "GrLivArea": 0.1252059530914268,
+    "Neighborhood_Crawfor": 0.07622987464166636,
+    "OverallQual": 0.07015630757266149,
+    "Roof1Material_BrkFace": 0.06650729750288611,
+    "SaleType_New": 0.060176164328118495,
+    "Functional_Typ": 0.057863962149847986,
+    "Neighborhood_StoneBr": 0.054475647787680014,
+    "YearBuilt": 0.049553238463308565,
+    "OverallCond": 0.044630730613587105,
+    "PropertyFooting_PConc": 0.03740521224830602
+  },
+  "top_negative_drivers": {
+    "PropertyZone_C (all)": -0.10578241615455439,
+    "PropertyZone_RM": -0.048641514156644236,
+    "CentralAir_N": -0.0436122827363405,
+    "SaleCondn_Abnorml": -0.03954169163220845,
+    "BsmntMaintenance_Fa": -0.0221287993447295,
+    "BasementType_None": -0.021748656152759803,
+    "BldgType_Twnhs": -0.019890762911110013,
+    "Neighborhood_Edwards": -0.01433615971860205,
+    "Condition1_Artery": -0.013751368270091267,
+    "PavedDrive_N": -0.011468955525135442
+  },
+  "test_eval_sample": [
+    {
+      "Actual Price": 189999.9999999999,
+      "Predicted Price": 224771.15120384787,
+      "Error": 34771.151203847956,
+      "Absolute Pct Error": 18.30060589676209
+    },
+    {
+      "Actual Price": 100000.00000000004,
+      "Predicted Price": 103905.26260793353,
+      "Error": 3905.2626079334877,
+      "Absolute Pct Error": 3.905262607933486
+    },
+    {
+      "Actual Price": 114999.99999999991,
+      "Predicted Price": 102726.98208211325,
+      "Error": -12273.017917886667,
+      "Absolute Pct Error": 10.672189493814502
+    },
+    {
+      "Actual Price": 158999.99999999997,
+      "Predicted Price": 156213.5900864636,
+      "Error": -2786.409913536365,
+      "Absolute Pct Error": 1.752459065117211
+    },
+    {
+      "Actual Price": 315500.00000000023,
+      "Predicted Price": 303375.55747575674,
+      "Error": -12124.442524243495,
+      "Absolute Pct Error": 3.84292948470475
+    },
+    {
+      "Actual Price": 137500.00000000012,
+      "Predicted Price": 148654.69420497923,
+      "Error": 11154.69420497911,
+      "Absolute Pct Error": 8.112504876348439
+    },
+    {
+      "Actual Price": 311500.0000000001,
+      "Predicted Price": 238989.51899762324,
+      "Error": -72510.48100237688,
+      "Absolute Pct Error": 23.277843018419535
+    },
+    {
+      "Actual Price": 310000.0000000002,
+      "Predicted Price": 326012.4781590596,
+      "Error": 16012.478159059421,
+      "Absolute Pct Error": 5.165315535180456
+    },
+    {
+      "Actual Price": 281000.0000000001,
+      "Predicted Price": 278397.792927445,
+      "Error": -2602.2070725550875,
+      "Absolute Pct Error": 0.9260523389875753
+    },
+    {
+      "Actual Price": 135500.00000000003,
+      "Predicted Price": 144127.77003334148,
+      "Error": 8627.770033341454,
+      "Absolute Pct Error": 6.367357958185574
+    },
+    {
+      "Actual Price": 164500.00000000012,
+      "Predicted Price": 153428.32881154655,
+      "Error": -11071.671188453562,
+      "Absolute Pct Error": 6.730499202707328
+    },
+    {
+      "Actual Price": 171749.99999999994,
+      "Predicted Price": 192238.81771356796,
+      "Error": 20488.817713568016,
+      "Absolute Pct Error": 11.929442627987203
+    },
+    {
+      "Actual Price": 173999.99999999997,
+      "Predicted Price": 174812.33675635714,
+      "Error": 812.3367563571665,
+      "Absolute Pct Error": 0.4668602048029693
+    },
+    {
+      "Actual Price": 316600.0000000002,
+      "Predicted Price": 294131.5809133985,
+      "Error": -22468.4190866017,
+      "Absolute Pct Error": 7.09678429772637
+    },
+    {
+      "Actual Price": 181000.00000000006,
+      "Predicted Price": 169946.2269177099,
+      "Error": -11053.773082290165,
+      "Absolute Pct Error": 6.107056951541526
+    },
+    {
+      "Actual Price": 157999.99999999997,
+      "Predicted Price": 168745.4125308902,
+      "Error": 10745.41253089023,
+      "Absolute Pct Error": 6.800894006892552
+    },
+    {
+      "Actual Price": 183500.00000000006,
+      "Predicted Price": 197943.8618472855,
+      "Error": 14443.861847285443,
+      "Absolute Pct Error": 7.8713143581936995
+    },
+    {
+      "Actual Price": 134999.99999999997,
+      "Predicted Price": 132393.66177917365,
+      "Error": -2606.338220826321,
+      "Absolute Pct Error": 1.9306209043157936
+    },
+    {
+      "Actual Price": 133700.0000000001,
+      "Predicted Price": 125165.41552596091,
+      "Error": -8534.584474039177,
+      "Absolute Pct Error": 6.3833840493935465
+    },
+    {
+      "Actual Price": 225999.9999999998,
+      "Predicted Price": 215153.78449757083,
+      "Error": -10846.215502428968,
+      "Absolute Pct Error": 4.799210399304857
+    },
+    {
+      "Actual Price": 196000.0000000001,
+      "Predicted Price": 188963.2756950349,
+      "Error": -7036.724304965173,
+      "Absolute Pct Error": 3.5901654617169236
+    },
+    {
+      "Actual Price": 210000.0,
+      "Predicted Price": 197934.89860369533,
+      "Error": -12065.101396304672,
+      "Absolute Pct Error": 5.745286379192701
+    },
+    {
+      "Actual Price": 173499.99999999985,
+      "Predicted Price": 178589.52801872822,
+      "Error": 5089.528018728364,
+      "Absolute Pct Error": 2.933445543935659
+    },
+    {
+      "Actual Price": 200499.99999999988,
+      "Predicted Price": 225469.04992769513,
+      "Error": 24969.049927695247,
+      "Absolute Pct Error": 12.453391485134793
+    },
+    {
+      "Actual Price": 191999.99999999997,
+      "Predicted Price": 198766.79860421462,
+      "Error": 6766.798604214651,
+      "Absolute Pct Error": 3.5243742730284646
+    },
+    {
+      "Actual Price": 153899.99999999988,
+      "Predicted Price": 156257.03019091254,
+      "Error": 2357.0301909126574,
+      "Absolute Pct Error": 1.5315335873376603
+    },
+    {
+      "Actual Price": 181134.00000000003,
+      "Predicted Price": 192263.16317902392,
+      "Error": 11129.16317902389,
+      "Absolute Pct Error": 6.144160223383731
+    },
+    {
+      "Actual Price": 140999.99999999994,
+      "Predicted Price": 106314.34641245195,
+      "Error": -34685.65358754799,
+      "Absolute Pct Error": 24.599754317409932
+    },
+    {
+      "Actual Price": 181000.00000000006,
+      "Predicted Price": 176385.81791043948,
+      "Error": -4614.182089560578,
+      "Absolute Pct Error": 2.5492718726854013
+    },
+    {
+      "Actual Price": 171000.00000000012,
+      "Predicted Price": 147087.76176329283,
+      "Error": -23912.238236707286,
+      "Absolute Pct Error": 13.983765050706007
+    },
+    {
+      "Actual Price": 126999.99999999991,
+      "Predicted Price": 130838.71501833205,
+      "Error": 3838.7150183321355,
+      "Absolute Pct Error": 3.022610250655227
+    },
+    {
+      "Actual Price": 112999.99999999993,
+      "Predicted Price": 106827.879959814,
+      "Error": -6172.120040185924,
+      "Absolute Pct Error": 5.462053132907901
+    },
+    {
+      "Actual Price": 195000.00000000006,
+      "Predicted Price": 187974.72369083515,
+      "Error": -7025.27630916491,
+      "Absolute Pct Error": 3.6027057995717473
+    },
+    {
+      "Actual Price": 135750.00000000012,
+      "Predicted Price": 111727.39657308714,
+      "Error": -24022.603426912974,
+      "Absolute Pct Error": 17.69620878593956
+    },
+    {
+      "Actual Price": 255000.0000000001,
+      "Predicted Price": 255633.8067141821,
+      "Error": 633.8067141820211,
+      "Absolute Pct Error": 0.24855165262040035
+    },
+    {
+      "Actual Price": 287000.0000000001,
+      "Predicted Price": 321884.3399586054,
+      "Error": 34884.3399586053,
+      "Absolute Pct Error": 12.154822285228322
+    },
+    {
+      "Actual Price": 132499.9999999999,
+      "Predicted Price": 126242.94681781942,
+      "Error": -6257.053182180491,
+      "Absolute Pct Error": 4.722304288438109
+    },
+    {
+      "Actual Price": 219500.00000000012,
+      "Predicted Price": 207425.34876453603,
+      "Error": -12074.651235464087,
+      "Absolute Pct Error": 5.500980061714843
+    },
+    {
+      "Actual Price": 112000.00000000004,
+      "Predicted Price": 105045.58539446243,
+      "Error": -6954.414605537619,
+      "Absolute Pct Error": 6.2092987549443
+    },
+    {
+      "Actual Price": 96999.99999999999,
+      "Predicted Price": 101711.03389300364,
+      "Error": 4711.033893003652,
+      "Absolute Pct Error": 4.856735972168715
+    },
+    {
+      "Actual Price": 114499.99999999991,
+      "Predicted Price": 128075.42339952654,
+      "Error": 13575.423399526626,
+      "Absolute Pct Error": 11.85626497775252
+    },
+    {
+      "Actual Price": 205000.0,
+      "Predicted Price": 240766.0826483571,
+      "Error": 35766.082648357115,
+      "Absolute Pct Error": 17.446869584564446
+    },
+    {
+      "Actual Price": 119500.00000000009,
+      "Predicted Price": 113155.05248411169,
+      "Error": -6344.9475158884015,
+      "Absolute Pct Error": 5.309579511203679
+    },
+    {
+      "Actual Price": 118500.00000000009,
+      "Predicted Price": 113872.72060075159,
+      "Error": -4627.279399248495,
+      "Absolute Pct Error": 3.9048771301675034
+    },
+    {
+      "Actual Price": 128500.00000000004,
+      "Predicted Price": 125033.99656556791,
+      "Error": -3466.003434432132,
+      "Absolute Pct Error": 2.697278937301269
+    },
+    {
+      "Actual Price": 179399.99999999994,
+      "Predicted Price": 162680.61447297875,
+      "Error": -16719.385527021193,
+      "Absolute Pct Error": 9.319612891316165
+    },
+    {
+      "Actual Price": 119200.00000000007,
+      "Predicted Price": 116366.56044911903,
+      "Error": -2833.439550881041,
+      "Absolute Pct Error": 2.3770466030881203
+    },
+    {
+      "Actual Price": 126999.99999999991,
+      "Predicted Price": 132504.70234097884,
+      "Error": 5504.702340978925,
+      "Absolute Pct Error": 4.334411292109393
+    },
+    {
+      "Actual Price": 138000.00000000006,
+      "Predicted Price": 149702.12727996634,
+      "Error": 11702.127279966284,
+      "Absolute Pct Error": 8.479802376787159
+    },
+    {
+      "Actual Price": 159999.99999999997,
+      "Predicted Price": 145626.18057993345,
+      "Error": -14373.819420066517,
+      "Absolute Pct Error": 8.983637137541574
+    },
+    {
+      "Actual Price": 129500.00000000006,
+      "Predicted Price": 139626.49533425047,
+      "Error": 10126.495334250416,
+      "Absolute Pct Error": 7.8196875167956845
+    },
+    {
+      "Actual Price": 68399.99999999997,
+      "Predicted Price": 83135.91872282836,
+      "Error": 14735.918722828384,
+      "Absolute Pct Error": 21.543740822848527
+    },
+    {
+      "Actual Price": 114999.99999999991,
+      "Predicted Price": 118712.45956201931,
+      "Error": 3712.4595620194013,
+      "Absolute Pct Error": 3.2282257061038293
+    },
+    {
+      "Actual Price": 134999.99999999997,
+      "Predicted Price": 144280.52184184548,
+      "Error": 9280.521841845504,
+      "Absolute Pct Error": 6.874460623589264
+    },
+    {
+      "Actual Price": 144499.99999999994,
+      "Predicted Price": 149402.65852225624,
+      "Error": 4902.658522256301,
+      "Absolute Pct Error": 3.392843267997441
+    },
+    {
+      "Actual Price": 259999.9999999998,
+      "Predicted Price": 246033.9284667692,
+      "Error": -13966.071533230599,
+      "Absolute Pct Error": 5.3715659743194655
+    },
+    {
+      "Actual Price": 213000.00000000015,
+      "Predicted Price": 209920.00544162927,
+      "Error": -3079.994558370876,
+      "Absolute Pct Error": 1.4460068349159032
+    },
+    {
+      "Actual Price": 175000.00000000012,
+      "Predicted Price": 148158.34180213374,
+      "Error": -26841.658197866374,
+      "Absolute Pct Error": 15.338090398780777
+    },
+    {
+      "Actual Price": 107000.00000000003,
+      "Predicted Price": 135102.97790253832,
+      "Error": 28102.97790253829,
+      "Absolute Pct Error": 26.26446532947503
+    },
+    {
+      "Actual Price": 39299.99999999996,
+      "Predicted Price": 52506.84336381259,
+      "Error": 13206.84336381263,
+      "Absolute Pct Error": 33.60519939901436
+    },
+    {
+      "Actual Price": 68499.99999999999,
+      "Predicted Price": 76312.3065478723,
+      "Error": 7812.306547872315,
+      "Absolute Pct Error": 11.404827077185864
+    },
+    {
+      "Actual Price": 200140.99999999983,
+      "Predicted Price": 198235.0699833374,
+      "Error": -1905.9300166624307,
+      "Absolute Pct Error": 0.9522936413140898
+    },
+    {
+      "Actual Price": 316999.9999999999,
+      "Predicted Price": 301469.3167893605,
+      "Error": -15530.6832106394,
+      "Absolute Pct Error": 4.899269151621263
+    },
+    {
+      "Actual Price": 264132.00000000023,
+      "Predicted Price": 248306.30532457898,
+      "Error": -15825.694675421255,
+      "Absolute Pct Error": 5.991585523685597
+    },
+    {
+      "Actual Price": 283463.0,
+      "Predicted Price": 289823.2667366569,
+      "Error": 6360.266736656893,
+      "Absolute Pct Error": 2.2437731685111966
+    },
+    {
+      "Actual Price": 243000.00000000003,
+      "Predicted Price": 213676.79029561696,
+      "Error": -29323.209704383073,
+      "Absolute Pct Error": 12.06716448740044
+    },
+    {
+      "Actual Price": 109000.0,
+      "Predicted Price": 108355.50967031522,
+      "Error": -644.490329684777,
+      "Absolute Pct Error": 0.5912755318208963
+    },
+    {
+      "Actual Price": 67000.0,
+      "Predicted Price": 70445.21790900324,
+      "Error": 3445.217909003244,
+      "Absolute Pct Error": 5.142116282094395
+    },
+    {
+      "Actual Price": 130999.99999999997,
+      "Predicted Price": 126898.23225335978,
+      "Error": -4101.767746640195,
+      "Absolute Pct Error": 3.131120417282592
+    },
+    {
+      "Actual Price": 176000.00000000006,
+      "Predicted Price": 163834.75856500858,
+      "Error": -12165.241434991476,
+      "Absolute Pct Error": 6.912068997154246
+    },
+    {
+      "Actual Price": 339999.99999999994,
+      "Predicted Price": 307723.19832624064,
+      "Error": -32276.8016737593,
+      "Absolute Pct Error": 9.493176962870384
+    },
+    {
+      "Actual Price": 143000.0000000001,
+      "Predicted Price": 140660.7276444629,
+      "Error": -2339.272355537192,
+      "Absolute Pct Error": 1.6358547940819517
+    },
+    {
+      "Actual Price": 109008.00000000007,
+      "Predicted Price": 109384.48095414667,
+      "Error": 376.48095414659474,
+      "Absolute Pct Error": 0.34537002251815874
+    },
+    {
+      "Actual Price": 157899.9999999999,
+      "Predicted Price": 156082.00818262028,
+      "Error": -1817.9918173796323,
+      "Absolute Pct Error": 1.1513564391257969
+    },
+    {
+      "Actual Price": 193879.00000000006,
+      "Predicted Price": 199889.56589042087,
+      "Error": 6010.56589042081,
+      "Absolute Pct Error": 3.100163447521809
+    },
+    {
+      "Actual Price": 179900.00000000006,
+      "Predicted Price": 195909.39023888175,
+      "Error": 16009.390238881693,
+      "Absolute Pct Error": 8.899049604714667
+    },
+    {
+      "Actual Price": 248900.00000000003,
+      "Predicted Price": 254287.4963669286,
+      "Error": 5387.496366928564,
+      "Absolute Pct Error": 2.164522445531765
+    },
+    {
+      "Actual Price": 168500.0,
+      "Predicted Price": 172289.64000525957,
+      "Error": 3789.640005259571,
+      "Absolute Pct Error": 2.2490445135071635
+    },
+    {
+      "Actual Price": 140999.99999999994,
+      "Predicted Price": 139221.82418525487,
+      "Error": -1778.1758147450746,
+      "Absolute Pct Error": 1.2611175991099823
+    },
+    {
+      "Actual Price": 124899.99999999993,
+      "Predicted Price": 120439.80992611905,
+      "Error": -4460.190073880876,
+      "Absolute Pct Error": 3.571008866197661
+    },
+    {
+      "Actual Price": 118000.00000000009,
+      "Predicted Price": 120205.33129412642,
+      "Error": 2205.3312941263284,
+      "Absolute Pct Error": 1.8689248255307853
+    },
+    {
+      "Actual Price": 67000.0,
+      "Predicted Price": 78953.6848667956,
+      "Error": 11953.684866795593,
+      "Absolute Pct Error": 17.84132069670984
+    },
+    {
+      "Actual Price": 112999.99999999993,
+      "Predicted Price": 111127.34139106146,
+      "Error": -1872.6586089384655,
+      "Absolute Pct Error": 1.6572200079101473
+    },
+    {
+      "Actual Price": 91299.99999999996,
+      "Predicted Price": 100619.95472536708,
+      "Error": 9319.954725367119,
+      "Absolute Pct Error": 10.208055559000135
+    },
+    {
+      "Actual Price": 149500.00000000012,
+      "Predicted Price": 155305.3878113711,
+      "Error": 5805.38781137098,
+      "Absolute Pct Error": 3.8832025494120237
+    },
+    {
+      "Actual Price": 369899.9999999998,
+      "Predicted Price": 367756.8046665562,
+      "Error": -2143.1953334436403,
+      "Absolute Pct Error": 0.5793985762215845
+    },
+    {
+      "Actual Price": 265999.9999999998,
+      "Predicted Price": 267819.0490806614,
+      "Error": 1819.0490806615562,
+      "Absolute Pct Error": 0.6838530378426908
+    },
+    {
+      "Actual Price": 189999.9999999999,
+      "Predicted Price": 200581.2591293817,
+      "Error": 10581.259129381797,
+      "Absolute Pct Error": 5.569083752306211
+    },
+    {
+      "Actual Price": 134999.99999999997,
+      "Predicted Price": 134560.95792066623,
+      "Error": -439.0420793337398,
+      "Absolute Pct Error": 0.32521635506202956
+    },
+    {
+      "Actual Price": 142500.00000000012,
+      "Predicted Price": 142070.89722704564,
+      "Error": -429.10277295447304,
+      "Absolute Pct Error": 0.30112475295050717
+    },
+    {
+      "Actual Price": 181000.00000000006,
+      "Predicted Price": 163771.63961231173,
+      "Error": -17228.360387688328,
+      "Absolute Pct Error": 9.518431153418963
+    },
+    {
+      "Actual Price": 125500.00000000006,
+      "Predicted Price": 121902.70963029291,
+      "Error": -3597.290369707145,
+      "Absolute Pct Error": 2.8663668284519073
+    },
+    {
+      "Actual Price": 124500.00000000003,
+      "Predicted Price": 129633.90487005025,
+      "Error": 5133.904870050217,
+      "Absolute Pct Error": 4.123618369518246
+    },
+    {
+      "Actual Price": 301000.00000000023,
+      "Predicted Price": 283719.8118855983,
+      "Error": -17280.188114401943,
+      "Absolute Pct Error": 5.740926283854462
+    },
+    {
+      "Actual Price": 136500.00000000006,
+      "Predicted Price": 118528.62576558716,
+      "Error": -17971.3742344129,
+      "Absolute Pct Error": 13.165841929972814
+    },
+    {
+      "Actual Price": 213490.00000000003,
+      "Predicted Price": 195197.03462896217,
+      "Error": -18292.965371037862,
+      "Absolute Pct Error": 8.56853499978353
+    },
+    {
+      "Actual Price": 205000.0,
+      "Predicted Price": 165368.431045133,
+      "Error": -39631.56895486699,
+      "Absolute Pct Error": 19.332472660910728
+    },
+    {
+      "Actual Price": 337000.0,
+      "Predicted Price": 317670.30909788987,
+      "Error": -19329.69090211013,
+      "Absolute Pct Error": 5.735813324068288
+    },
+    {
+      "Actual Price": 204899.99999999985,
+      "Predicted Price": 211798.7490991991,
+      "Error": 6898.749099199253,
+      "Absolute Pct Error": 3.366885846363718
+    },
+    {
+      "Actual Price": 259999.9999999998,
+      "Predicted Price": 265939.37723652605,
+      "Error": 5939.377236526256,
+      "Absolute Pct Error": 2.284375860202408
+    },
+    {
+      "Actual Price": 163499.99999999988,
+      "Predicted Price": 165354.1128031864,
+      "Error": 1854.1128031865228,
+      "Absolute Pct Error": 1.1340139469030728
+    },
+    {
+      "Actual Price": 287089.9999999999,
+      "Predicted Price": 247054.79113534844,
+      "Error": -40035.208864651446,
+      "Absolute Pct Error": 13.94517707501183
+    },
+    {
+      "Actual Price": 244000.00000000003,
+      "Predicted Price": 305017.35463470366,
+      "Error": 61017.35463470363,
+      "Absolute Pct Error": 25.0071125552064
+    },
+    {
+      "Actual Price": 131999.9999999999,
+      "Predicted Price": 132492.65866759396,
+      "Error": 492.6586675940489,
+      "Absolute Pct Error": 0.3732262633288252
+    },
+    {
+      "Actual Price": 149900.0,
+      "Predicted Price": 153965.77125925812,
+      "Error": 4065.771259258123,
+      "Absolute Pct Error": 2.7123223877639244
+    },
+    {
+      "Actual Price": 178999.99999999994,
+      "Predicted Price": 174360.56028816447,
+      "Error": -4639.439711835468,
+      "Absolute Pct Error": 2.591865760801938
+    },
+    {
+      "Actual Price": 179540.0,
+      "Predicted Price": 196111.7156755551,
+      "Error": 16571.71567555511,
+      "Absolute Pct Error": 9.230096733627665
+    },
+    {
+      "Actual Price": 239000.00000000003,
+      "Predicted Price": 249822.25224823706,
+      "Error": 10822.252248237026,
+      "Absolute Pct Error": 4.528139015998755
+    },
+    {
+      "Actual Price": 86000.00000000001,
+      "Predicted Price": 91798.79861075325,
+      "Error": 5798.798610753234,
+      "Absolute Pct Error": 6.7427890822712016
+    },
+    {
+      "Actual Price": 289999.9999999999,
+      "Predicted Price": 291043.2880079863,
+      "Error": 1043.2880079864408,
+      "Absolute Pct Error": 0.35975448551256595
+    },
+    {
+      "Actual Price": 187500.0,
+      "Predicted Price": 172807.53175889808,
+      "Error": -14692.468241101917,
+      "Absolute Pct Error": 7.835983061921022
+    },
+    {
+      "Actual Price": 124000.00000000007,
+      "Predicted Price": 111969.06317948284,
+      "Error": -12030.936820517236,
+      "Absolute Pct Error": 9.702368403642927
+    },
+    {
+      "Actual Price": 185750.0,
+      "Predicted Price": 176199.61252005084,
+      "Error": -9550.38747994916,
+      "Absolute Pct Error": 5.141527580053384
+    },
+    {
+      "Actual Price": 137500.00000000012,
+      "Predicted Price": 134966.71964708003,
+      "Error": -2533.28035292009,
+      "Absolute Pct Error": 1.8423857112146094
+    },
+    {
+      "Actual Price": 213499.99999999994,
+      "Predicted Price": 206783.54940076088,
+      "Error": -6716.450599239062,
+      "Absolute Pct Error": 3.14587850081455
+    },
+    {
+      "Actual Price": 118999.99999999993,
+      "Predicted Price": 112727.62922015031,
+      "Error": -6272.370779849618,
+      "Absolute Pct Error": 5.270899814999682
+    },
+    {
+      "Actual Price": 187500.0,
+      "Predicted Price": 192661.51740696287,
+      "Error": 5161.51740696287,
+      "Absolute Pct Error": 2.7528092837135305
+    },
+    {
+      "Actual Price": 123000.00000000009,
+      "Predicted Price": 112829.34170580827,
+      "Error": -10170.658294191817,
+      "Absolute Pct Error": 8.268827881456756
+    },
+    {
+      "Actual Price": 124999.9999999999,
+      "Predicted Price": 110205.18176327835,
+      "Error": -14794.818236721549,
+      "Absolute Pct Error": 11.835854589377249
+    },
+    {
+      "Actual Price": 284000.00000000023,
+      "Predicted Price": 305290.5876940665,
+      "Error": 21290.587694066286,
+      "Absolute Pct Error": 7.496685807769812
+    },
+    {
+      "Actual Price": 179664.99999999988,
+      "Predicted Price": 211802.49605317524,
+      "Error": 32137.49605317536,
+      "Absolute Pct Error": 17.887455015264734
+    },
+    {
+      "Actual Price": 149000.0,
+      "Predicted Price": 142711.2562524368,
+      "Error": -6288.743747563189,
+      "Absolute Pct Error": 4.220633387626301
+    },
+    {
+      "Actual Price": 239499.99999999983,
+      "Predicted Price": 237834.42270896418,
+      "Error": -1665.5772910356463,
+      "Absolute Pct Error": 0.6954393699522536
+    },
+    {
+      "Actual Price": 206999.99999999994,
+      "Predicted Price": 173893.40730025855,
+      "Error": -33106.59269974139,
+      "Absolute Pct Error": 15.993523043353333
+    },
+    {
+      "Actual Price": 175000.00000000012,
+      "Predicted Price": 186222.84595730624,
+      "Error": 11222.845957306126,
+      "Absolute Pct Error": 6.4130548327463535
+    },
+    {
+      "Actual Price": 134500.00000000006,
+      "Predicted Price": 134950.16068291327,
+      "Error": 450.160682913207,
+      "Absolute Pct Error": 0.3346919575562876
+    },
+    {
+      "Actual Price": 235999.9999999999,
+      "Predicted Price": 232629.92340558098,
+      "Error": -3370.0765944189334,
+      "Absolute Pct Error": 1.4279985569571756
+    },
+    {
+      "Actual Price": 185900.00000000012,
+      "Predicted Price": 187925.68820624507,
+      "Error": 2025.6882062449586,
+      "Absolute Pct Error": 1.0896655224555982
+    },
+    {
+      "Actual Price": 197900.0000000001,
+      "Predicted Price": 189405.50699814636,
+      "Error": -8494.493001853727,
+      "Absolute Pct Error": 4.292315817005418
+    },
+    {
+      "Actual Price": 130000.00000000009,
+      "Predicted Price": 133875.35029963075,
+      "Error": 3875.3502996306634,
+      "Absolute Pct Error": 2.981038692023585
+    },
+    {
+      "Actual Price": 451950.00000000006,
+      "Predicted Price": 448371.2595200714,
+      "Error": -3578.740479928674,
+      "Absolute Pct Error": 0.7918443367471344
+    },
+    {
+      "Actual Price": 130000.00000000009,
+      "Predicted Price": 115860.4571846404,
+      "Error": -14139.542815359688,
+      "Absolute Pct Error": 10.876571396430522
+    },
+    {
+      "Actual Price": 129000.0000000001,
+      "Predicted Price": 130882.70023601202,
+      "Error": 1882.7002360119222,
+      "Absolute Pct Error": 1.4594575472960625
+    },
+    {
+      "Actual Price": 104000.00000000003,
+      "Predicted Price": 125278.1917085367,
+      "Error": 21278.191708536673,
+      "Absolute Pct Error": 20.459799719746798
+    },
+    {
+      "Actual Price": 35311.00000000002,
+      "Predicted Price": 57653.65671182172,
+      "Error": 22342.6567118217,
+      "Absolute Pct Error": 63.273927987940546
+    },
+    {
+      "Actual Price": 159499.9999999999,
+      "Predicted Price": 190672.880350032,
+      "Error": 31172.880350032094,
+      "Absolute Pct Error": 19.5441256113054
+    },
+    {
+      "Actual Price": 278000.0000000002,
+      "Predicted Price": 345951.8308463275,
+      "Error": 67951.8308463273,
+      "Absolute Pct Error": 24.443104620981025
+    },
+    {
+      "Actual Price": 130249.9999999999,
+      "Predicted Price": 129480.14911419427,
+      "Error": -769.8508858056302,
+      "Absolute Pct Error": 0.5910563422691983
+    },
+    {
+      "Actual Price": 230000.0000000001,
+      "Predicted Price": 241695.21958293734,
+      "Error": 11695.21958293725,
+      "Absolute Pct Error": 5.0848780795379325
+    },
+    {
+      "Actual Price": 197000.00000000015,
+      "Predicted Price": 236819.30808902817,
+      "Error": 39819.308089028025,
+      "Absolute Pct Error": 20.21284674569949
+    },
+    {
+      "Actual Price": 402999.9999999999,
+      "Predicted Price": 359941.53207772045,
+      "Error": -43058.46792227944,
+      "Absolute Pct Error": 10.68448335540433
+    },
+    {
+      "Actual Price": 446261.0000000001,
+      "Predicted Price": 444007.01444956905,
+      "Error": -2253.985550431069,
+      "Absolute Pct Error": 0.5050823510078337
+    },
+    {
+      "Actual Price": 177999.99999999994,
+      "Predicted Price": 169963.75825994962,
+      "Error": -8036.241740050318,
+      "Absolute Pct Error": 4.514742550590068
+    },
+    {
+      "Actual Price": 118500.00000000009,
+      "Predicted Price": 135597.64152089,
+      "Error": 17097.641520889912,
+      "Absolute Pct Error": 14.4283894691054
+    },
+    {
+      "Actual Price": 145000.00000000012,
+      "Predicted Price": 130175.81018839119,
+      "Error": -14824.189811608929,
+      "Absolute Pct Error": 10.223579180419943
+    },
+    {
+      "Actual Price": 112500.00000000004,
+      "Predicted Price": 118732.78367954284,
+      "Error": 6232.783679542801,
+      "Absolute Pct Error": 5.540252159593599
+    },
+    {
+      "Actual Price": 249999.9999999998,
+      "Predicted Price": 227695.23142595435,
+      "Error": -22304.768574045447,
+      "Absolute Pct Error": 8.921907429618187
+    },
+    {
+      "Actual Price": 187100.00000000006,
+      "Predicted Price": 185859.69819968785,
+      "Error": -1240.3018003122124,
+      "Absolute Pct Error": 0.6629084982962117
+    },
+    {
+      "Actual Price": 237000.00000000003,
+      "Predicted Price": 258420.59378812,
+      "Error": 21420.593788119964,
+      "Absolute Pct Error": 9.038225227054836
+    },
+    {
+      "Actual Price": 240000.00000000003,
+      "Predicted Price": 265734.1027318953,
+      "Error": 25734.102731895255,
+      "Absolute Pct Error": 10.722542804956355
+    },
+    {
+      "Actual Price": 137500.00000000012,
+      "Predicted Price": 113054.01650339656,
+      "Error": -24445.983496603556,
+      "Absolute Pct Error": 17.778897088438935
+    },
+    {
+      "Actual Price": 155000.00000000012,
+      "Predicted Price": 139210.98235672837,
+      "Error": -15789.017643271742,
+      "Absolute Pct Error": 10.18646299565918
+    },
+    {
+      "Actual Price": 175000.00000000012,
+      "Predicted Price": 179921.51671029787,
+      "Error": 4921.5167102977575,
+      "Absolute Pct Error": 2.812295263027288
+    },
+    {
+      "Actual Price": 154299.99999999997,
+      "Predicted Price": 159418.8655924957,
+      "Error": 5118.865592495742,
+      "Absolute Pct Error": 3.3174760806842145
+    },
+    {
+      "Actual Price": 191000.00000000015,
+      "Predicted Price": 194709.22962088845,
+      "Error": 3709.2296208883054,
+      "Absolute Pct Error": 1.9420050371142943
+    },
+    {
+      "Actual Price": 135999.99999999997,
+      "Predicted Price": 125556.27248290439,
+      "Error": -10443.727517095584,
+      "Absolute Pct Error": 7.679211409629107
+    },
+    {
+      "Actual Price": 134999.99999999997,
+      "Predicted Price": 125341.3783188077,
+      "Error": -9658.621681192264,
+      "Absolute Pct Error": 7.154534578660939
+    },
+    {
+      "Actual Price": 139999.9999999999,
+      "Predicted Price": 143729.9012706778,
+      "Error": 3729.9012706778885,
+      "Absolute Pct Error": 2.6642151933413505
+    },
+    {
+      "Actual Price": 200624.0000000001,
+      "Predicted Price": 251539.64759385152,
+      "Error": 50915.647593851434,
+      "Absolute Pct Error": 25.378642432536193
+    },
+    {
+      "Actual Price": 192999.99999999985,
+      "Predicted Price": 191268.16545050536,
+      "Error": -1731.8345494944951,
+      "Absolute Pct Error": 0.8973236007743505
+    },
+    {
+      "Actual Price": 179900.00000000006,
+      "Predicted Price": 193214.38480899564,
+      "Error": 13314.384808995586,
+      "Absolute Pct Error": 7.400992111726283
+    },
+    {
+      "Actual Price": 106000.00000000001,
+      "Predicted Price": 125225.943217985,
+      "Error": 19225.943217984983,
+      "Absolute Pct Error": 18.137682281117907
+    },
+    {
+      "Actual Price": 293076.99999999994,
+      "Predicted Price": 301220.6530251797,
+      "Error": 8143.653025179752,
+      "Absolute Pct Error": 2.778673531249383
+    },
+    {
+      "Actual Price": 144499.99999999994,
+      "Predicted Price": 141924.51345775597,
+      "Error": -2575.486542243976,
+      "Absolute Pct Error": 1.7823436278505034
+    },
+    {
+      "Actual Price": 145000.00000000012,
+      "Predicted Price": 140682.17426392745,
+      "Error": -4317.825736072671,
+      "Absolute Pct Error": 2.9778108524639086
+    },
+    {
+      "Actual Price": 129000.0000000001,
+      "Predicted Price": 181026.05709672876,
+      "Error": 52026.05709672866,
+      "Absolute Pct Error": 40.33027681916948
+    },
+    {
+      "Actual Price": 239000.00000000003,
+      "Predicted Price": 232726.06549229703,
+      "Error": -6273.934507703001,
+      "Absolute Pct Error": 2.625077199875732
+    },
+    {
+      "Actual Price": 276000.0000000002,
+      "Predicted Price": 340934.5401193349,
+      "Error": 64934.540119334706,
+      "Absolute Pct Error": 23.527007289614012
+    },
+    {
+      "Actual Price": 120000.00000000004,
+      "Predicted Price": 137670.27190069846,
+      "Error": 17670.27190069841,
+      "Absolute Pct Error": 14.725226583915338
+    },
+    {
+      "Actual Price": 244400.00000000017,
+      "Predicted Price": 212096.0118725813,
+      "Error": -32303.98812741888,
+      "Absolute Pct Error": 13.217671083231938
+    },
+    {
+      "Actual Price": 360000.0000000001,
+      "Predicted Price": 369112.38829391566,
+      "Error": 9112.388293915545,
+      "Absolute Pct Error": 2.531218970532095
+    },
+    {
+      "Actual Price": 103200.00000000009,
+      "Predicted Price": 96191.55992783309,
+      "Error": -7008.440072166995,
+      "Absolute Pct Error": 6.791124100937005
+    },
+    {
+      "Actual Price": 93000.00000000007,
+      "Predicted Price": 100330.75539944693,
+      "Error": 7330.755399446862,
+      "Absolute Pct Error": 7.882532687577265
+    },
+    {
+      "Actual Price": 275000.0000000002,
+      "Predicted Price": 261601.6053866123,
+      "Error": -13398.394613387878,
+      "Absolute Pct Error": 4.872143495777407
+    },
+    {
+      "Actual Price": 239000.00000000003,
+      "Predicted Price": 219359.18914514323,
+      "Error": -19640.810854856798,
+      "Absolute Pct Error": 8.217912491571882
+    },
+    {
+      "Actual Price": 134432.00000000003,
+      "Predicted Price": 109570.09992520165,
+      "Error": -24861.90007479838,
+      "Absolute Pct Error": 18.494034214173986
+    },
+    {
+      "Actual Price": 112999.99999999993,
+      "Predicted Price": 119649.14951620606,
+      "Error": 6649.149516206133,
+      "Absolute Pct Error": 5.884203111686847
+    },
+    {
+      "Actual Price": 139000.00000000003,
+      "Predicted Price": 125165.4641963153,
+      "Error": -13834.535803684732,
+      "Absolute Pct Error": 9.952903455888293
+    },
+    {
+      "Actual Price": 177000.00000000006,
+      "Predicted Price": 170625.95486952548,
+      "Error": -6374.04513047458,
+      "Absolute Pct Error": 3.601155440946089
+    },
+    {
+      "Actual Price": 83500.00000000001,
+      "Predicted Price": 100739.88560099942,
+      "Error": 17239.885600999405,
+      "Absolute Pct Error": 20.646569582035212
+    },
+    {
+      "Actual Price": 134500.00000000006,
+      "Predicted Price": 124913.83516954024,
+      "Error": -9586.16483045982,
+      "Absolute Pct Error": 7.127260096996146
+    },
+    {
+      "Actual Price": 165499.99999999988,
+      "Predicted Price": 163618.04466916918,
+      "Error": -1881.9553308307077,
+      "Absolute Pct Error": 1.1371331304113046
+    },
+    {
+      "Actual Price": 370878.00000000006,
+      "Predicted Price": 338150.4468352926,
+      "Error": -32727.55316470744,
+      "Absolute Pct Error": 8.82434470761475
+    },
+    {
+      "Actual Price": 134999.99999999997,
+      "Predicted Price": 144143.20105127792,
+      "Error": 9143.201051277953,
+      "Absolute Pct Error": 6.772741519465152
+    },
+    {
+      "Actual Price": 255000.0000000001,
+      "Predicted Price": 261843.9795176214,
+      "Error": 6843.979517621308,
+      "Absolute Pct Error": 2.683913536322081
+    },
+    {
+      "Actual Price": 139999.9999999999,
+      "Predicted Price": 131458.5453028713,
+      "Error": -8541.454697128618,
+      "Absolute Pct Error": 6.101039069377588
+    },
+    {
+      "Actual Price": 87999.99999999996,
+      "Predicted Price": 99290.58783336547,
+      "Error": 11290.587833365513,
+      "Absolute Pct Error": 12.830213447006269
+    },
+    {
+      "Actual Price": 246577.99999999994,
+      "Predicted Price": 232644.80975760927,
+      "Error": -13933.190242390672,
+      "Absolute Pct Error": 5.65062180826784
+    },
+    {
+      "Actual Price": 280000.0,
+      "Predicted Price": 310222.64600270917,
+      "Error": 30222.646002709167,
+      "Absolute Pct Error": 10.793802143824703
+    },
+    {
+      "Actual Price": 155000.00000000012,
+      "Predicted Price": 172149.86754495138,
+      "Error": 17149.867544951267,
+      "Absolute Pct Error": 11.0644306741621
+    },
+    {
+      "Actual Price": 122499.99999999996,
+      "Predicted Price": 119705.72788185469,
+      "Error": -2794.2721181452653,
+      "Absolute Pct Error": 2.281038463792054
+    },
+    {
+      "Actual Price": 320000.00000000006,
+      "Predicted Price": 291631.3346677678,
+      "Error": -28368.665332232253,
+      "Absolute Pct Error": 8.865207916322577
+    },
+    {
+      "Actual Price": 157999.99999999997,
+      "Predicted Price": 147517.16582641678,
+      "Error": -10482.834173583193,
+      "Absolute Pct Error": 6.634705173153921
+    },
+    {
+      "Actual Price": 139999.9999999999,
+      "Predicted Price": 129901.50698422812,
+      "Error": -10098.49301577179,
+      "Absolute Pct Error": 7.213209296979854
+    },
+    {
+      "Actual Price": 82500.00000000001,
+      "Predicted Price": 88772.45742045545,
+      "Error": 6272.457420455437,
+      "Absolute Pct Error": 7.602978691461135
+    },
+    {
+      "Actual Price": 359099.9999999999,
+      "Predicted Price": 325461.37732045463,
+      "Error": -33638.62267954525,
+      "Absolute Pct Error": 9.367480556821294
+    },
+    {
+      "Actual Price": 177999.99999999994,
+      "Predicted Price": 174597.75747493916,
+      "Error": -3402.2425250607776,
+      "Absolute Pct Error": 1.911372205090325
+    },
+    {
+      "Actual Price": 40000.0,
+      "Predicted Price": 85002.46176522117,
+      "Error": 45002.461765221175,
+      "Absolute Pct Error": 112.50615441305294
+    },
+    {
+      "Actual Price": 172499.99999999985,
+      "Predicted Price": 197511.2723497943,
+      "Error": 25011.272349794453,
+      "Absolute Pct Error": 14.499288318721435
+    },
+    {
+      "Actual Price": 114999.99999999991,
+      "Predicted Price": 119548.86874561607,
+      "Error": 4548.868745616157,
+      "Absolute Pct Error": 3.9555380396662265
+    },
+    {
+      "Actual Price": 280000.0,
+      "Predicted Price": 220682.85160230414,
+      "Error": -59317.148397695855,
+      "Absolute Pct Error": 21.184695856319948
+    },
+    {
+      "Actual Price": 233999.9999999999,
+      "Predicted Price": 198409.65373376408,
+      "Error": -35590.346266235836,
+      "Absolute Pct Error": 15.209549686425577
+    },
+    {
+      "Actual Price": 146999.99999999988,
+      "Predicted Price": 117463.8579747839,
+      "Error": -29536.142025215988,
+      "Absolute Pct Error": 20.092613622595927
+    },
+    {
+      "Actual Price": 315000.0000000002,
+      "Predicted Price": 314532.21016252285,
+      "Error": -467.78983747732127,
+      "Absolute Pct Error": 0.14850471031026063
+    },
+    {
+      "Actual Price": 334999.9999999998,
+      "Predicted Price": 320989.72843489534,
+      "Error": -14010.271565104485,
+      "Absolute Pct Error": 4.182170616449103
+    },
+    {
+      "Actual Price": 191000.00000000015,
+      "Predicted Price": 221365.645196937,
+      "Error": 30365.64519693685,
+      "Absolute Pct Error": 15.898243558605667
+    },
+    {
+      "Actual Price": 240000.00000000003,
+      "Predicted Price": 237725.59815924958,
+      "Error": -2274.401840750448,
+      "Absolute Pct Error": 0.9476674336460199
+    },
+    {
+      "Actual Price": 139000.00000000003,
+      "Predicted Price": 135691.8870368649,
+      "Error": -3308.1129631351214,
+      "Absolute Pct Error": 2.3799373835504465
+    },
+    {
+      "Actual Price": 139999.9999999999,
+      "Predicted Price": 148203.74148519727,
+      "Error": 8203.741485197359,
+      "Absolute Pct Error": 5.859815346569546
+    },
+    {
+      "Actual Price": 109999.99999999991,
+      "Predicted Price": 107701.0197491301,
+      "Error": -2298.9802508698194,
+      "Absolute Pct Error": 2.089982046245292
+    },
+    {
+      "Actual Price": 225000.00000000015,
+      "Predicted Price": 236384.48913612912,
+      "Error": 11384.489136128977,
+      "Absolute Pct Error": 5.059772949390654
+    },
+    {
+      "Actual Price": 173999.99999999997,
+      "Predicted Price": 186973.17678234854,
+      "Error": 12973.176782348572,
+      "Absolute Pct Error": 7.455848725487686
+    },
+    {
+      "Actual Price": 128950.00000000006,
+      "Predicted Price": 113511.5862652638,
+      "Error": -15438.413734736256,
+      "Absolute Pct Error": 11.97240305136584
+    },
+    {
+      "Actual Price": 172499.99999999985,
+      "Predicted Price": 157571.02663080674,
+      "Error": -14928.973369193118,
+      "Absolute Pct Error": 8.654477315474278
+    },
+    {
+      "Actual Price": 241500.0,
+      "Predicted Price": 195780.76639460397,
+      "Error": -45719.23360539603,
+      "Absolute Pct Error": 18.931359670971442
+    },
+    {
+      "Actual Price": 262500.00000000023,
+      "Predicted Price": 248247.20985039024,
+      "Error": -14252.790149609995,
+      "Absolute Pct Error": 5.429634342708565
+    },
+    {
+      "Actual Price": 217499.9999999998,
+      "Predicted Price": 212048.84004507266,
+      "Error": -5451.159954927134,
+      "Absolute Pct Error": 2.5062804390469604
+    },
+    {
+      "Actual Price": 136500.00000000006,
+      "Predicted Price": 161063.03251589576,
+      "Error": 24563.0325158957,
+      "Absolute Pct Error": 17.994895616040797
+    },
+    {
+      "Actual Price": 130000.00000000009,
+      "Predicted Price": 114277.58374164764,
+      "Error": -15722.416258352445,
+      "Absolute Pct Error": 12.094166352578796
+    },
+    {
+      "Actual Price": 125999.99999999993,
+      "Predicted Price": 132210.43099584366,
+      "Error": 6210.430995843737,
+      "Absolute Pct Error": 4.928913488764874
+    },
+    {
+      "Actual Price": 275000.0000000002,
+      "Predicted Price": 267548.27052253706,
+      "Error": -7451.7294774631155,
+      "Absolute Pct Error": 2.709719809986586
+    },
+    {
+      "Actual Price": 254000.0000000002,
+      "Predicted Price": 216540.61155255308,
+      "Error": -37459.38844744713,
+      "Absolute Pct Error": 14.747790727341375
+    },
+    {
+      "Actual Price": 151000.00000000006,
+      "Predicted Price": 146748.38290416234,
+      "Error": -4251.617095837719,
+      "Absolute Pct Error": 2.8156404608196803
+    },
+    {
+      "Actual Price": 182900.00000000006,
+      "Predicted Price": 190703.99533103523,
+      "Error": 7803.99533103517,
+      "Absolute Pct Error": 4.266809913086478
+    },
+    {
+      "Actual Price": 155835.0,
+      "Predicted Price": 193779.03131785785,
+      "Error": 37944.03131785785,
+      "Absolute Pct Error": 24.34885059059765
+    },
+    {
+      "Actual Price": 155000.00000000012,
+      "Predicted Price": 142583.96911095304,
+      "Error": -12416.030889047077,
+      "Absolute Pct Error": 8.010342509062625
+    },
+    {
+      "Actual Price": 119899.9999999999,
+      "Predicted Price": 113527.7651295154,
+      "Error": -6372.234870484492,
+      "Absolute Pct Error": 5.314624579219764
+    },
+    {
+      "Actual Price": 64500.000000000015,
+      "Predicted Price": 101131.45971670857,
+      "Error": 36631.45971670856,
+      "Absolute Pct Error": 56.79296080109852
+    },
+    {
+      "Actual Price": 106000.00000000001,
+      "Predicted Price": 111256.45877710098,
+      "Error": 5256.458777100968,
+      "Absolute Pct Error": 4.958923374623554
+    },
+    {
+      "Actual Price": 102775.99999999994,
+      "Predicted Price": 89970.41256602822,
+      "Error": -12805.587433971727,
+      "Absolute Pct Error": 12.459705995535664
+    },
+    {
+      "Actual Price": 84900.00000000001,
+      "Predicted Price": 100097.08704827598,
+      "Error": 15197.087048275964,
+      "Absolute Pct Error": 17.899984744730226
+    },
+    {
+      "Actual Price": 165600.0000000001,
+      "Predicted Price": 171220.0009654147,
+      "Error": 5620.000965414627,
+      "Absolute Pct Error": 3.3937203897431303
+    },
+    {
+      "Actual Price": 224499.99999999985,
+      "Predicted Price": 212220.42188214452,
+      "Error": -12279.57811785533,
+      "Absolute Pct Error": 5.469745264078101
+    },
+    {
+      "Actual Price": 134999.99999999997,
+      "Predicted Price": 125558.2940036744,
+      "Error": -9441.705996325574,
+      "Absolute Pct Error": 6.993856293574501
+    },
+    {
+      "Actual Price": 151000.00000000006,
+      "Predicted Price": 156233.61688208365,
+      "Error": 5233.616882083588,
+      "Absolute Pct Error": 3.465971445088468
+    },
+    {
+      "Actual Price": 153575.0,
+      "Predicted Price": 136061.6829517322,
+      "Error": -17513.31704826781,
+      "Absolute Pct Error": 11.403755199913926
+    },
+    {
+      "Actual Price": 195400.0,
+      "Predicted Price": 201206.82552311567,
+      "Error": 5806.825523115665,
+      "Absolute Pct Error": 2.9717633178688154
+    },
+    {
+      "Actual Price": 146999.99999999988,
+      "Predicted Price": 160149.0643902872,
+      "Error": 13149.064390287327,
+      "Absolute Pct Error": 8.94494176210023
+    },
+    {
+      "Actual Price": 276999.9999999998,
+      "Predicted Price": 242008.40609819107,
+      "Error": -34991.59390180875,
+      "Absolute Pct Error": 12.632344368884036
+    },
+    {
+      "Actual Price": 109999.99999999991,
+      "Predicted Price": 138570.3861257627,
+      "Error": 28570.3861257628,
+      "Absolute Pct Error": 25.97307829614802
+    },
+    {
+      "Actual Price": 105900.00000000006,
+      "Predicted Price": 111031.8188711799,
+      "Error": 5131.818871179843,
+      "Absolute Pct Error": 4.845910171085779
+    },
+    {
+      "Actual Price": 242000.00000000017,
+      "Predicted Price": 267513.87830690236,
+      "Error": 25513.87830690219,
+      "Absolute Pct Error": 10.542924920207508
+    },
+    {
+      "Actual Price": 194500.0,
+      "Predicted Price": 225688.46382597837,
+      "Error": 31188.463825978368,
+      "Absolute Pct Error": 16.035199910528725
+    },
+    {
+      "Actual Price": 438779.9999999998,
+      "Predicted Price": 467301.8954370686,
+      "Error": 28521.89543706877,
+      "Absolute Pct Error": 6.500272445660419
+    },
+    {
+      "Actual Price": 235128.0,
+      "Predicted Price": 217090.91738189317,
+      "Error": -18037.082618106826,
+      "Absolute Pct Error": 7.6711759629252265
+    },
+    {
+      "Actual Price": 188000.00000000012,
+      "Predicted Price": 199037.8204312764,
+      "Error": 11037.820431276283,
+      "Absolute Pct Error": 5.871181080466104
+    },
+    {
+      "Actual Price": 165000.00000000015,
+      "Predicted Price": 150094.382127174,
+      "Error": -14905.617872826144,
+      "Absolute Pct Error": 9.033707801712806
+    },
+    {
+      "Actual Price": 174499.99999999994,
+      "Predicted Price": 165506.84445162953,
+      "Error": -8993.155548370414,
+      "Absolute Pct Error": 5.153670801358405
+    },
+    {
+      "Actual Price": 129900.00000000012,
+      "Predicted Price": 144850.88680806884,
+      "Error": 14950.886808068724,
+      "Absolute Pct Error": 11.509535649013634
+    },
+    {
+      "Actual Price": 114999.99999999991,
+      "Predicted Price": 92275.36420928463,
+      "Error": -22724.635790715285,
+      "Absolute Pct Error": 19.76055286149157
+    },
+    {
+      "Actual Price": 265978.9999999998,
+      "Predicted Price": 206361.27700663081,
+      "Error": -59617.72299336901,
+      "Absolute Pct Error": 22.414447378691193
+    },
+    {
+      "Actual Price": 109999.99999999991,
+      "Predicted Price": 150729.4683824363,
+      "Error": 40729.468382436375,
+      "Absolute Pct Error": 37.02678943857855
+    },
+    {
+      "Actual Price": 145000.00000000012,
+      "Predicted Price": 133954.2905005524,
+      "Error": -11045.709499447723,
+      "Absolute Pct Error": 7.6177306892742855
+    },
+    {
+      "Actual Price": 127500.00000000001,
+      "Predicted Price": 120082.85190598207,
+      "Error": -7417.148094017946,
+      "Absolute Pct Error": 5.817371054131722
+    },
+    {
+      "Actual Price": 271999.9999999999,
+      "Predicted Price": 243917.90643579833,
+      "Error": -28082.093564201554,
+      "Absolute Pct Error": 10.324299104485869
+    },
+    {
+      "Actual Price": 197500.0,
+      "Predicted Price": 192299.10338646566,
+      "Error": -5200.896613534336,
+      "Absolute Pct Error": 2.633365373941436
+    },
+    {
+      "Actual Price": 119500.00000000009,
+      "Predicted Price": 126473.7440967498,
+      "Error": 6973.74409674971,
+      "Absolute Pct Error": 5.835769118619
+    },
+    {
+      "Actual Price": 377500.0000000002,
+      "Predicted Price": 339307.2096105895,
+      "Error": -38192.790389410686,
+      "Absolute Pct Error": 10.117295467393554
+    },
+    {
+      "Actual Price": 175900.0000000001,
+      "Predicted Price": 174868.009087386,
+      "Error": -1031.9909126140992,
+      "Absolute Pct Error": 0.5866918207015911
+    },
+    {
+      "Actual Price": 112000.00000000004,
+      "Predicted Price": 88637.85730973307,
+      "Error": -23362.142690266977,
+      "Absolute Pct Error": 20.85905597345265
+    },
+    {
+      "Actual Price": 176432.00000000015,
+      "Predicted Price": 173358.3391489442,
+      "Error": -3073.66085105596,
+      "Absolute Pct Error": 1.7421220929627037
+    },
+    {
+      "Actual Price": 139999.9999999999,
+      "Predicted Price": 126710.81918788588,
+      "Error": -13289.180812114035,
+      "Absolute Pct Error": 9.492272008652888
+    },
+    {
+      "Actual Price": 128199.99999999996,
+      "Predicted Price": 124991.18020528833,
+      "Error": -3208.8197947116278,
+      "Absolute Pct Error": 2.502979559057433
+    },
+    {
+      "Actual Price": 275000.0000000002,
+      "Predicted Price": 244167.23333264477,
+      "Error": -30832.766667355405,
+      "Absolute Pct Error": 11.211915151765595
+    },
+    {
+      "Actual Price": 311872.00000000006,
+      "Predicted Price": 315969.84670547704,
+      "Error": 4097.846705476986,
+      "Absolute Pct Error": 1.3139514626119002
+    },
+    {
+      "Actual Price": 244000.00000000003,
+      "Predicted Price": 270705.9911399087,
+      "Error": 26705.9911399087,
+      "Absolute Pct Error": 10.945078336028153
+    },
+    {
+      "Actual Price": 153500.0,
+      "Predicted Price": 170771.53588589226,
+      "Error": 17271.535885892255,
+      "Absolute Pct Error": 11.251814909376062
+    },
+    {
+      "Actual Price": 144000.0,
+      "Predicted Price": 137910.39588990362,
+      "Error": -6089.604110096378,
+      "Absolute Pct Error": 4.228891743122484
+    },
+    {
+      "Actual Price": 240000.00000000003,
+      "Predicted Price": 262973.18781585334,
+      "Error": 22973.187815853307,
+      "Absolute Pct Error": 9.572161589938876
+    },
+    {
+      "Actual Price": 180000.00000000003,
+      "Predicted Price": 168398.41339879943,
+      "Error": -11601.5866012006,
+      "Absolute Pct Error": 6.445325889555888
+    },
+    {
+      "Actual Price": 132499.9999999999,
+      "Predicted Price": 123262.31595879405,
+      "Error": -9237.684041205866,
+      "Absolute Pct Error": 6.971837012230847
+    },
+    {
+      "Actual Price": 180000.00000000003,
+      "Predicted Price": 208050.86587277276,
+      "Error": 28050.86587277273,
+      "Absolute Pct Error": 15.583814373762625
+    },
+    {
+      "Actual Price": 253000.0000000001,
+      "Predicted Price": 227911.2366488914,
+      "Error": -25088.763351108675,
+      "Absolute Pct Error": 9.916507253402635
+    },
+    {
+      "Actual Price": 84999.99999999996,
+      "Predicted Price": 95340.81171767446,
+      "Error": 10340.8117176745,
+      "Absolute Pct Error": 12.165660844322948
+    },
+    {
+      "Actual Price": 132499.9999999999,
+      "Predicted Price": 136687.25837468458,
+      "Error": 4187.258374684665,
+      "Absolute Pct Error": 3.160194999762014
+    },
+    {
+      "Actual Price": 127500.00000000001,
+      "Predicted Price": 122022.47942138779,
+      "Error": -5477.520578612224,
+      "Absolute Pct Error": 4.296094571460567
+    },
+    {
+      "Actual Price": 79899.99999999997,
+      "Predicted Price": 99752.5696437545,
+      "Error": 19852.569643754527,
+      "Absolute Pct Error": 24.84677051784047
+    },
+    {
+      "Actual Price": 318061.0000000001,
+      "Predicted Price": 292382.3079595083,
+      "Error": -25678.69204049179,
+      "Absolute Pct Error": 8.073511697596304
+    },
+    {
+      "Actual Price": 79500.00000000004,
+      "Predicted Price": 95525.10424646409,
+      "Error": 16025.104246464049,
+      "Absolute Pct Error": 20.15736383203024
+    },
+    {
+      "Actual Price": 191999.99999999997,
+      "Predicted Price": 195511.3521678733,
+      "Error": 3511.352167873323,
+      "Absolute Pct Error": 1.8288292541006894
+    },
+    {
+      "Actual Price": 192499.99999999997,
+      "Predicted Price": 205166.13666481577,
+      "Error": 12666.1366648158,
+      "Absolute Pct Error": 6.579811254449767
+    },
+    {
+      "Actual Price": 92000.00000000007,
+      "Predicted Price": 91136.66635440127,
+      "Error": -863.3336455988028,
+      "Absolute Pct Error": 0.9384061365204371
+    },
+    {
+      "Actual Price": 197000.00000000015,
+      "Predicted Price": 196600.5937770031,
+      "Error": -399.40622299705865,
+      "Absolute Pct Error": 0.20274427563302452
+    },
+    {
+      "Actual Price": 333167.9999999997,
+      "Predicted Price": 323573.5976882528,
+      "Error": -9594.402311746904,
+      "Absolute Pct Error": 2.879749049052404
+    },
+    {
+      "Actual Price": 297000.0000000002,
+      "Predicted Price": 300706.66493354057,
+      "Error": 3706.6649335403927,
+      "Absolute Pct Error": 1.2480353311583807
+    },
+    {
+      "Actual Price": 169900.00000000003,
+      "Predicted Price": 144867.7293125233,
+      "Error": -25032.270687476732,
+      "Absolute Pct Error": 14.733531893747337
+    },
+    {
+      "Actual Price": 230000.0000000001,
+      "Predicted Price": 214712.59777801225,
+      "Error": -15287.402221987839,
+      "Absolute Pct Error": 6.64669661825558
+    },
+    {
+      "Actual Price": 89471.00000000004,
+      "Predicted Price": 117365.01578719949,
+      "Error": 27894.015787199445,
+      "Absolute Pct Error": 31.17660000134058
+    },
+    {
+      "Actual Price": 259999.9999999998,
+      "Predicted Price": 258363.91863950883,
+      "Error": -1636.0813604909636,
+      "Absolute Pct Error": 0.6292620617272942
+    },
+    {
+      "Actual Price": 175900.0000000001,
+      "Predicted Price": 215763.7656368909,
+      "Error": 39863.76563689081,
+      "Absolute Pct Error": 22.662743397891294
+    },
+    {
+      "Actual Price": 108000.00000000001,
+      "Predicted Price": 112206.0225299346,
+      "Error": 4206.022529934591,
+      "Absolute Pct Error": 3.8944653054949914
+    },
+    {
+      "Actual Price": 124500.00000000003,
+      "Predicted Price": 117331.91319770152,
+      "Error": -7168.086802298509,
+      "Absolute Pct Error": 5.757499439597194
+    }
+  ]
+}
