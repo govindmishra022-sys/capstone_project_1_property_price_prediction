@@ -1,0 +1,2 @@
+# capstone_project_1_property_price_prediction
+COMPREHENSIVE PROPERTY VALUATION & MACHINE LEARNING ANALYSIS REPORT
